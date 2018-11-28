@@ -229,5 +229,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    
+    /*
+     * 未支付订单取消的时间（s）
+     */
+    'order_ttl' => 1800,
 
 ];
