@@ -234,5 +234,10 @@ return [
      * 未支付订单取消的时间（s）
      */
     'order_ttl' => 1800,
+    
+    /*
+     * 代理服务器ngrok url
+     */
+    'ngrok_url' => env('NGROK_URL'),
 
 ];
