@@ -24,8 +24,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // 每分钟执行一次
+        // 计算众筹订单
         $schedule->command('cron:finish-crowdfunding')->everyMinute();
+        // 计算分期付款逾期
+        $schedule->command('cron:calculate-installment-fine')->daily();
     }
 
     /**
