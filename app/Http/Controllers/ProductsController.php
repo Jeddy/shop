@@ -56,7 +56,7 @@ class ProductsController extends Controller
             }
         }
     
-        $products = $builder->paginate(16);
+        $products = $builder->orderByDesc('created_at')->paginate(16);
         return view('products.index', [
             'products' => $products,
             'filters'  => [
