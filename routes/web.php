@@ -43,12 +43,8 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('installments/{installment}/alipay', 'InstallmentsController@payByAlipay')->name('installments.alipay');
         Route::get('installments/alipay/return', 'InstallmentsController@alipayReturn')->name('installments.alipay.return'); // 分期付款支付包前端回调
         Route::get('installments/{installment}/wechat', 'InstallmentsController@payByWechat')->name('installments.wechat');
-    
-    
-    
-    
-    
-    
+        Route::post('seckill_orders', 'OrdersController@seckill')->name('seckill_orders.store');
+        
     });
 });
 
